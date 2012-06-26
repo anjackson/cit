@@ -173,9 +173,9 @@ def save_items():
 def list_all_items():
     conf = GetUserInfo()
     token = conf.api_token
-    config_project = ConfigParser.SafeConfigParser()
+    config_project = ConfigParser.RawConfigParser()
     config_project.read(project_file)
-    config_task = ConfigParser.SafeConfigParser()
+    config_task = ConfigParser.RawConfigParser()
     config_task.read(task_file)
 
     print "Id  Project    Item"
@@ -199,9 +199,9 @@ def list_all_items():
 def list_project_items(args):
     conf = GetUserInfo()
     token = conf.api_token
-    config_project = ConfigParser.SafeConfigParser()
+    config_project = ConfigParser.RawConfigParser()
     config_project.read(project_file)
-    config_task = ConfigParser.SafeConfigParser()
+    config_task = ConfigParser.RawConfigParser()
     config_task.read(task_file)
 
     # args = ["+work", "+personal"] --> bare_project = ["work", "personal"]
